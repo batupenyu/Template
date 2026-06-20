@@ -182,10 +182,11 @@ if DATA_PEGAWAI:
                     output_buffer.seek(0)
                     
                     st.success(f"Dokumen untuk {nama_pilihan} berhasil dibuat!")
+                    nama_file = re.sub(r'[\\/:*?"<>|]', "_", nama_pilihan)
                     st.download_button(
                         label="Unduh Dokumen Word (.docx)",
                         data=output_buffer.getvalue(),
-                        file_name=f"Dokumen_Administrasi_{nip}.docx",
+                        file_name=f"Dokumen_Administrasi_{nama_file}.docx",
                         mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
                     )
                 except FileNotFoundError:
