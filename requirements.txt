@@ -1,0 +1,7 @@
+streamlit
+streamlit-drawable-canvas
+docxtpl
+python-docx
+pillow
+pandas
+openpyxl
